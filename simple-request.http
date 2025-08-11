@@ -1,0 +1,4 @@
+@baseUrl = https://ltestkr762.azurewebsites.net/add
+
+GET {{baseUrl}}/
+Content-Type: application/json

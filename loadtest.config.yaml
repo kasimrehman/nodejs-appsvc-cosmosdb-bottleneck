@@ -1,0 +1,52 @@
+version: v0.1
+displayName: Test - 08/10/2025 07:50:13 PM
+description: Locust load test
+testPlan: locustfile.py
+testType: Locust
+engineInstances: 1
+env:
+  - name: LOCUST_USERS
+    value: 50
+  - name: LOCUST_SPAWN_RATE
+    value: 1
+  - name: LOCUST_RUN_TIME
+    value: '120'
+  - name: ENABLE_LOGGING
+    value: 'true'
+resourceId: >-
+  /subscriptions/1cb23184-9179-4e6d-967d-90a84baccc36/resourceGroups/load-test/providers/Microsoft.LoadTestService/loadtests/myloadtestkr76001
+configurationFiles:
+  - requirements.txt
+referenceIdentities:
+  - type: SystemAssigned
+    kind: Metrics
+appComponents:
+  - resourceId: >-
+      /subscriptions/1cb23184-9179-4e6d-967d-90a84baccc36/resourceGroups/ltestkr762germanywestcentral-rg/providers/Microsoft.Insights/components/ltestkr762
+    resourceName: ltestkr762
+    resourceType: Microsoft.Insights/components
+    resourceGroup: ltestkr762germanywestcentral-rg
+    subscriptionId: 1cb23184-9179-4e6d-967d-90a84baccc36
+    kind: web
+  - resourceId: >-
+      /subscriptions/1cb23184-9179-4e6d-967d-90a84baccc36/resourceGroups/ltestkr762germanywestcentral-rg/providers/Microsoft.Web/serverFarms/ltestkr762-host
+    resourceName: ltestkr762-host
+    resourceType: Microsoft.Web/serverFarms
+    resourceGroup: ltestkr762germanywestcentral-rg
+    subscriptionId: 1cb23184-9179-4e6d-967d-90a84baccc36
+    kind: app
+  - resourceId: >-
+      /subscriptions/1cb23184-9179-4e6d-967d-90a84baccc36/resourceGroups/ltestkr762germanywestcentral-rg/providers/Microsoft.DocumentDb/databaseAccounts/ltestkr762db
+    resourceName: ltestkr762db
+    resourceType: Microsoft.DocumentDb/databaseAccounts
+    resourceGroup: ltestkr762germanywestcentral-rg
+    subscriptionId: 1cb23184-9179-4e6d-967d-90a84baccc36
+    kind: MongoDB
+  - resourceId: >-
+      /subscriptions/1cb23184-9179-4e6d-967d-90a84baccc36/resourceGroups/ltestkr762germanywestcentral-rg/providers/Microsoft.Web/sites/ltestkr762
+    resourceName: ltestkr762
+    resourceType: Microsoft.Web/sites
+    resourceGroup: ltestkr762germanywestcentral-rg
+    subscriptionId: 1cb23184-9179-4e6d-967d-90a84baccc36
+    kind: app
+testId: 19526a4c-b5e7-43b8-b561-fa340978f3db
